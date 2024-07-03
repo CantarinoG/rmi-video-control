@@ -7,6 +7,10 @@ import Pyro4
 
 def main():
 
+    #As informações dos vídeos são previamente declaradas numa lista de Maps em videos_data.py
+    #Para escolher qual dos vídeos listados lá vai rodar nesse servidor, basta adicionar o índice do vídeo como argumento ao rodar esse script
+    #Exemplo: "python3 video_server.py 1" roda o vídeo que está no índice 1, ou seja, o segundo da lista
+
     index = int(sys.argv[1])
 
     if (index < 0 or index >= len(availableVideos)):
