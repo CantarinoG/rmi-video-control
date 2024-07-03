@@ -8,15 +8,22 @@ def main():
     videos = []
 
     for videoData in availableVideos:
-        uri = ns.lookup(videoData["name"])
-        video = Pyro4.Proxy(uri)
-        videos.append(video)
+        try:
+            uri = ns.lookup(videoData["name"])
+            video = Pyro4.Proxy(uri)
+            videos.append(video)
+        except Exception as e:
+            print(f"An error ocurred when connecting to {videoData['name']}")
+
+    print(videos)
 
     while True:
         print("=" * 20)
         print("Select a Video:")
-        for i in range(3):
+        i = 0
+        for video in videos:
             print(f"{i}: {video.getName()}")
+            i += 1
         index = int(input())
         print("Select an option:")
         print("0: Play")
