@@ -9,6 +9,10 @@ def main():
 
     index = int(sys.argv[1])
 
+    if (index < 0 or index >= len(availableVideos)):
+        print("Invalid index.")
+        exit()
+
     videoData = availableVideos[index]
 
     video = Video(videoData["name"], videoData["path"])
