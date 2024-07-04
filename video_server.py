@@ -1,6 +1,7 @@
 import sys
 from video import Video
-from videos_data import availableVideos
+from data import availableVideos
+from data import ip
 
 import Pyro4
 @Pyro4.expose 
@@ -21,7 +22,7 @@ def main():
 
     video = Video(videoData["name"], videoData["path"])
 
-    daemon = Pyro4.Daemon(host="192.168.3.109")
+    daemon = Pyro4.Daemon(host=ip)
 
     ns = Pyro4.locateNS()
 

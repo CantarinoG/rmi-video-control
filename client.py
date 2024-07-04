@@ -1,9 +1,10 @@
 import Pyro4
 import time
-from videos_data import availableVideos
+from data import availableVideos
+from data import ip
 
 def main():
-    ns = Pyro4.locateNS(host="192.168.3.109")  
+    ns = Pyro4.locateNS(host=ip)  
 
     videos = []
 
@@ -14,8 +15,6 @@ def main():
             videos.append(video)
         except Exception as e:
             print(f"An error ocurred when connecting to {videoData['name']}")
-
-    print(videos)
 
     while True:
         print("=" * 20)
