@@ -7,7 +7,8 @@
 * Servidores dos vídeos: Iniciar o video_server.py passando o index do vídeo que será reproduzido. Ex ``` python3 video_server.py 0 ```
 * Cliente: Rodar client.py (```python3 client.py```)
 
-## O que precisa instalar para funcionar:
+### O que precisa instalar para funcionar:
+    pip install Pyro4
+    pip install opencv-python 
 
-pip install Pyro4
-pip install opencv-python.
+
