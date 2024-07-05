@@ -8,8 +8,6 @@
 * Cliente: Rodar client.py (```python3 client.py```)
 
 ### O que precisa instalar para funcionar:
-    pip install Pyro4
-    
-    pip install opencv-python 
+    pip install Pyro4 opencv-python 
 
 
