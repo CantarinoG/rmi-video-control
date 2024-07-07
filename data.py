@@ -46,9 +46,9 @@ integrantes = [
     },
     {
         "name": "Guilherme José",
-        "image": "./images/Thais.png",
-        "github": "https://github.com/thais",
-        "matricula": "20221002032"
+        "image": "./images/GuilhermeJose.jpg",
+        "github": "https://github.com/gui",
+        "matricula": "2020007808"
     },
 ]
 
