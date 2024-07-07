@@ -170,9 +170,13 @@ def main(page: ft.Page):
         navbar = ft.Container(
             width=500,
             height=50,
-            bgcolor=ft.colors.GREEN,
             border_radius=ft.border_radius.all(20),
             padding=ft.padding.all(5),
+            gradient=ft.LinearGradient(
+                begin=ft.alignment.bottom_left,
+                end=ft.alignment.top_right,
+                colors=[ft.colors.GREEN_800, ft.colors.GREEN],    
+            ),
             content=ft.Row(
                 controls=[
                     ft.Text(
@@ -264,7 +268,7 @@ def main(page: ft.Page):
                     ft.Text(
                         text_align=ft.TextAlign.CENTER,
                         spans=[
-                            ft.TextSpan(text='INTEGRANTES DO GRUPO\n', style=ft.TextStyle(color=ft.colors.BLACK if theme == "light" else ft.colors.WHITE, weight=ft.FontWeight.BOLD, size=20)),
+                            ft.TextSpan(text='INTEGRANTES DO GRUPO', style=ft.TextStyle(color=ft.colors.BLACK if theme == "light" else ft.colors.WHITE, weight=ft.FontWeight.BOLD, size=20)),
                         ],
                     ),
                 ]
@@ -305,7 +309,11 @@ def main(page: ft.Page):
         
         footer = ft.Container(
             padding=ft.padding.all(20),
-            bgcolor=ft.colors.GREEN,
+             gradient=ft.LinearGradient(
+                begin=ft.alignment.bottom_left,
+                end=ft.alignment.top_right,
+                colors=[ft.colors.GREEN_800, ft.colors.GREEN],    
+            ),
             content=ft.Row(
                 alignment=ft.MainAxisAlignment.SPACE_AROUND,
                 controls=[
@@ -357,6 +365,7 @@ def main(page: ft.Page):
         page.add(
             ft.Row(
                 alignment=ft.MainAxisAlignment.CENTER,
+                wrap=True,
                 spacing=30,
                 controls=video_cards,
             )
@@ -367,6 +376,7 @@ def main(page: ft.Page):
         page.add(
             ft.Row(
                 alignment=ft.MainAxisAlignment.CENTER,
+                wrap=True,
                 spacing=20,
                 controls=integrantes_cards,
             )
