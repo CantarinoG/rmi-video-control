@@ -6,4 +6,4 @@ availableVideos = [
     {"name": "video3", "path": "./videos/video3.mp4"},
 ]
 
-ip = "192.168.3.109"
+ip = "192.168.0.32"

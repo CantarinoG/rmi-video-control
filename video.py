@@ -31,7 +31,7 @@ class Video():
 
                 cv2.imshow("Video", frame)
 
-                if cv2.waitKey(1) == ord('q'):
+                if cv2.waitKey(33) == ord('q'):
                     break
 
         with self.lock:
