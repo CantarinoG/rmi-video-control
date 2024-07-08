@@ -1,10 +1,10 @@
 import Pyro4
 import time
 from data import availableVideos
-from data import ip
+from data import nsIp
 
 def main():
-    ns = Pyro4.locateNS(host=ip)  
+    ns = Pyro4.locateNS(host=nsIp)  
 
     videos = []
 
