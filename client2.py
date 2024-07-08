@@ -11,13 +11,14 @@ class VideoClientApp(ft.UserControl):
         self.load_videos()
 
     def load_videos(self):
-        for videoData in availableVideos:
-            try:
-                uri = self.ns.lookup(videoData["name"])
-                video = Pyro4.Proxy(uri)
-                self.videos.append(video)
-            except Exception as e:
-                print(f"An error occurred when connecting to {videoData['name']}: {e}")
+        videos = []
+        with Pyro4.locateNS() as ns:
+            for video, videoUri in ns.list(prefix="example.video.").items():
+                print("found video", video)
+                videos.append(Pyro4.Proxy(videoUri))
+        if not videos:
+            raise ValueError("no videos found! (have you started the servers first?)")
+        
 
     def build(self):
         self.video_buttons = [

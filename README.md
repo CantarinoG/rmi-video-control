@@ -6,7 +6,7 @@
   Ex: proucure por algo como ```192.168.3.8```
 * Trocar a variavel ip no data.py pelo seu ip obtido.
 * Servidores dos vídeos: Iniciar o video_server.py passando o index do vídeo que será reproduzido. Ex ``` python3 video_server.py 0 ```
-* Cliente: Rodar client.py (```python3 client.py```),
+* Cliente: Rodar client.py (```python3 cmi_client.py```),
 * Client com Interface Gráfica: Rodar o client.py(```flet run client.py```)
 
 ### O que precisa instalar para funcionar:
