@@ -23,17 +23,12 @@ def main():
 
     video = Video(videoData["name"], videoData["path"])
 
-    daemon = Pyro4.Daemon(host=daemonIp)
-
-    ns = Pyro4.locateNS(host=nsIp)
-
-    uri = daemon.register(video)
-
-    ns.register(video.name, uri)
-
-    print(f"Server is ready. {video.name} is ready to play!")
-
-    daemon.requestLoop()
+    with Pyro4.Daemon(host="192.168.0.106", port=9095 + index) as daemon:
+        uri = daemon.register(video)
+        with Pyro4.locateNS() as ns:
+            ns.register(f"example.video.{video.name}", uri)
+        print(f"Server running with {video.name}")
+        daemon.requestLoop()
 
 if __name__ == "__main__":
     main()
