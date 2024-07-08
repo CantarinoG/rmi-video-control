@@ -1,7 +1,5 @@
 import Pyro4
-import time
-from data import availableVideos
-from data import nsIp
+
 
 def main():
 
