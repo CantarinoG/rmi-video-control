@@ -1,26 +1,26 @@
 from video import Video
 
 availableVideos = [
-    {"name": "video1", "path": "./videos/video1.mp4"},
-    {"name": "video2", "path": "./videos/video2.mp4"},
+    {"name": "video1", "path": "./videos/video2.mp4"},
+    {"name": "video2", "path": "./videos/video1.mp4"},
     {"name": "video3", "path": "./videos/video3.mp4"},
 ]
 
 video_data_list = [
     {
         "image": "./images/soccer-player-sport-character-eed4f9.webp",
-        "title": "História do Futebol 1",
-        "description": "Descrição do vídeo 1Descrição do vídeo 1Descrição do vídeo 1Descrição do vídeo 1Descrição do vídeo 1Descrição do vídeo 1"
+        "title": "A Historia do Futebol",
+        "description": "Neste vídeo abordamos o surgimento do Futebol, desde os seus primordios até a sua transformação no que estamos acostumados no dia de hoje."
     },
     {
         "image": "https://example.com/image2.png",
-        "title": "História do Futebol 2",
-        "description": "Descrição do vídeo 2Descrição do vídeo 2Descrição do vídeo 2Descrição do vídeo 2Descrição do vídeo 2Descrição do vídeo 2Descrição do vídeo 2"
+        "title": "A Tecnologia Oculta do Futebol",
+        "description": "Nesse vídeo é apresentado a tecnologia por trás das decisões do VAR."
     },
     {
         "image": "https://example.com/image2.png",
-        "title": "História do Futebol 2",
-        "description": "Descrição do vídeo 2Descrição do vídeo 2Descrição do vídeo 2Descrição do vídeo 2Descrição do vídeo 2Descrição do vídeo 2Descrição do vídeo 2"
+        "title": "A Tecnologia da Linha do Gol",
+        "description": "Nesse vídeo é apresentado soluções tecnológicas para monitorar os gols marcados em partidas da FIFA."
     },
 
 ]
