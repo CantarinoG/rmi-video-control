@@ -8,12 +8,12 @@ availableVideos = [
 
 video_data_list = [
     {
-        "image": "./images/soccer-player-sport-character-eed4f9.webp",
+        "image": "./images/1.png",
         "title": "A Historia do Futebol",
         "description": "Neste vídeo abordamos o surgimento do Futebol, desde os seus primordios até a sua transformação no que estamos acostumados no dia de hoje."
     },
     {
-        "image": "https://example.com/image2.png",
+        "image": "./images/2.png",
         "title": "A Tecnologia Oculta do Futebol",
         "description": "Nesse vídeo é apresentado a tecnologia por trás das decisões do VAR."
     },
