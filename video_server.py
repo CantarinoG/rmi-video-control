@@ -1,8 +1,7 @@
 import sys
 from video import Video
 from data import availableVideos
-from data import daemonIp
-from data import nsIp
+from data import ip
 
 import Pyro4
 @Pyro4.expose 
@@ -23,7 +22,7 @@ def main():
 
     video = Video(videoData["name"], videoData["path"])
 
-    with Pyro4.Daemon(host="192.168.0.106", port=9095 + index) as daemon:
+    with Pyro4.Daemon(host=ip, port=9095 + index) as daemon:
         uri = daemon.register(video)
         with Pyro4.locateNS() as ns:
             ns.register(f"example.video.{video.name}", uri)
